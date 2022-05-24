@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
+    @State var tabIndex = 0
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView(selection: $tabIndex) {
+            CampMarker()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                }.tag(0)
+            SearchMap()
+                .tabItem {
+                    Image(systemName: "network")
+                }
+                .tag(1)
+
+        }
     }
 }
 

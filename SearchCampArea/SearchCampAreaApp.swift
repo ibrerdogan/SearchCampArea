@@ -12,6 +12,7 @@ struct SearchCampAreaApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //SearchMap()
         }
     }
 }
